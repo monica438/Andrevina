@@ -1,5 +1,6 @@
 package com.monicadominguez.andrevina
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -68,6 +69,11 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 Toast.makeText(this, "Error: has d'escriure un número", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        findViewById<Button>(R.id.button2).setOnClickListener {
+            val intent = Intent(this, HallOfFameActivity::class.java)
+            startActivity(intent)
         }
 
     }
